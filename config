@@ -27,7 +27,7 @@ new_window normal 0 px
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-font pango: Ubuntu Regular 11
+font pango: Ubuntu Regular 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -40,7 +40,7 @@ font pango: Ubuntu Regular 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+f exec google-chrome-stable
 
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -55,7 +55,7 @@ bindsym $mod+q kill
 bindsym --release button2 kill
 
 # The right button toggles floating
-#bindsym button3 floating toggle
+bindsym button3 floating toggle
 #bindsym $mod+button3 floating toggle
 
 # start dmenu (a program launcher)
@@ -207,5 +207,3 @@ bar {
 }
 
 exec_always feh --bg-scale /home/daniel/Pictures/yes.png
-
-bindsym XF86TouchpadToggle exec touchpad_toggle.sh
