@@ -206,4 +206,22 @@ bar {
 	}
 }
 
+bindsym $mod+m exec xdotool mousemove_relative -- -$fast 0
+bindsym Shift+$mod+p exec xdotool mousemove_relative 0 $fast
+bindsym Shift+$mod2+Up exec xdotool mousemove_relative -- 0 -$fast
+bindsym Shift+$mod2+Right exec xdotool mousemove_relative $fast 0
+
+#Move mouse-cursor with numpadnumbe
+#setxkbmap -option keypad:pointerkeys
+
+#keyboard light-control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Pulse Audio controls keyboard
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+#exec_always xrandr --output LVDS1 --off --output VGA1 --auto
 exec_always feh --bg-scale /home/daniel/Pictures/yes.png
