@@ -15,12 +15,16 @@ set $mod2 control
 
 #Make the border smaller
 #new_window 1pixel
+#new_window none
+new_window normal 0 px
+#new_window pixel 10
+
 
 #Remove titlebar
 #for_window [class="^.*"] border pixel 1
 
 #Try to remove borders
-new_window normal 0 px
+#new_window normal 5 px
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -29,7 +33,7 @@ new_window normal 0 px
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-font pango: Ubuntu Regular 10
+font pango: Ubuntu Regular 11
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -61,7 +65,7 @@ bindsym button3 floating toggle
 #bindsym $mod+button3 floating toggle
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+x exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -174,7 +178,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+#bindsym $mod+r mode "resize"
 
 #set $bg-color               #2f343f default
 #set $bg-color               #242424 #303030 black #f3f4f5 white1 #676E7D white2inactive
@@ -244,5 +248,5 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-#exec_always xrandr --output LVDS1 --off --output VGA1 --auto
-exec_always feh --bg-scale /home/daniel/Pictures/yes.png
+exec_always xrandr --output LVDS1 --off --output VGA1 --auto
+exec_always feh --bg-scale /home/daniel/Pictures/1.jpg
