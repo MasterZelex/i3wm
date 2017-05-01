@@ -10,6 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $mod1 Mod4
+set $mod2 control
 
 #Make the border smaller
 #new_window 1pixel
@@ -66,22 +68,22 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+oslash focus right
+bindsym $mod1+j focus left
+bindsym $mod1+k focus down
+bindsym $mod1+l focus up
+bindsym $mod1+oslash focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod1+Left focus left
+bindsym $mod1+Down focus down
+bindsym $mod1+Up focus up
+bindsym $mod1+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+oslash move right
+bindsym $mod1+Shift+j move left
+bindsym $mod1+Shift+k move down
+bindsym $mod1+Shift+l move up
+bindsym $mod1+Shift+oslash move right
 
 #bindsym $mod+Shift+x Home
 
