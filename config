@@ -214,6 +214,25 @@ bindsym Shift+$mod2+Right exec xdotool mousemove_relative $fast 0
 #Move mouse-cursor with numpadnumbe
 #setxkbmap -option keypad:pointerkeys
 
+#Home
+bindsym --release $mod+r exec --no-startup-id xdotool key --clearmodifiers Home
+
+#Arrows
+bindsym --release $mod2+j exec --no-startup-id xdotool key --clearmodifiers Left
+bindsym --release $mod2+l exec --no-startup-id xdotool key --clearmodifiers Right
+bindsym --release $mod2+k exec --no-startup-id xdotool key --clearmodifiers Down
+bindsym --release $mod2+i exec --no-startup-id xdotool key --clearmodifiers Up
+
+#Jumping
+bindsym --release $mod+u exec --no-startup-id xdotool key --clearmodifiers Home
+bindsym --release $mod+o exec --no-startup-id xdotool key --clearmodifiers End
+bindsym --release $mod+j exec --no-startup-id xdotool key --clearmodifiers Control_L+Left
+bindsym --release $mod+l exec --no-startup-id xdotool key --clearmodifiers Control_L+Right
+
+#Delete
+bindsym --release $mod2+u exec --no-startup-id xdotool key --clearmodifiers Control_L+BackSpace
+bindsym --release $mod2+o exec --no-startup-id xdotool key --clearmodifiers Control_L+Delete
+
 #keyboard light-control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
