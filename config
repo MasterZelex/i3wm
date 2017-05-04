@@ -16,12 +16,11 @@ set $mod2 control
 #Make the border smaller
 #new_window 1pixel
 #new_window none
-new_window normal 0 px
-#new_window pixel 10
-
+#new_window normal 0 px
+#new_window pixel 1
 
 #Remove titlebar
-#for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border none
 
 #Try to remove borders
 #new_window normal 5 px
@@ -54,6 +53,9 @@ bindsym $mod+Shift+f exec google-chrome-stable
 # kill focused window
 bindsym $mod+q kill
 
+# Force kill focused xwindow
+bindsym --release $mod+Shift+c exec xkill
+
 # The middle button and a modifer over any part of the window kills the window
 #bindsym --whole-window $mod+button2 kill
 
@@ -63,6 +65,9 @@ bindsym --release button2 kill
 # The right button toggles floating
 bindsym button3 floating toggle
 #bindsym $mod+button3 floating toggle
+
+# Get me to the next open VIM instance
+#bindsym $mod+b [class="urxvt" title="Google Chrome"] focus
 
 # start dmenu (a program launcher)
 bindsym $mod+x exec dmenu_run
@@ -152,7 +157,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit #i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -220,8 +226,8 @@ bindsym Shift+$mod2+Right exec xdotool mousemove_relative $fast 0
 #Move mouse-cursor with numpadnumbe
 #setxkbmap -option keypad:pointerkeys
 
-#Home
 bindsym --release $mod+r exec --no-startup-id xdotool key --clearmodifiers Home
+bindsym --release $mod+g exec --no-startup-id xdotool key --clearmodifiers End
 
 #Arrows
 bindsym --release $mod2+j exec --no-startup-id xdotool key --clearmodifiers Left
@@ -248,5 +254,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-exec_always xrandr --output LVDS1 --off --output VGA1 --auto
+gaps inner 20
+gaps outer 10
+
+#floating_minimum_size 75 x 50
+#floating_maximum_size -1 x -1
+
+#exec_always xrandr --output LVDS1 --off --output VGA1 --auto
 exec_always feh --bg-scale /home/daniel/Pictures/1.jpg
