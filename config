@@ -120,7 +120,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+q floating toggle
+bindsym $mod2+e floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -226,7 +226,7 @@ bindsym Shift+$mod+p exec xdotool mousemove_relative 0 $fast
 bindsym Shift+$mod2+Up exec xdotool mousemove_relative -- 0 -$fast
 bindsym Shift+$mod2+Right exec xdotool mousemove_relative $fast 0
 
-#Move mouse-cursor with numpadnumbe
+#Move mouse-cursor with numpadnumber
 #setxkbmap -option keypad:pointerkeys
 
 bindsym --release $mod+r exec --no-startup-id xdotool key --clearmodifiers Home
@@ -247,7 +247,7 @@ bindsym --release $mod+l exec --no-startup-id xdotool key --clearmodifiers Contr
 #Delete
 bindsym --release $mod2+o exec --no-startup-id xdotool key --clearmodifiers Control_L+Delete
 bindsym --release $mod2+u exec --no-startup-id xdotool key --clearmodifiers Control_L+BackSpace
-bindsym --release $mod2+e exec --no-startup-id xdotool key --clearmodifiers BackSpace
+bindsym --release $mod2+w exec --no-startup-id xdotool key --clearmodifiers BackSpace
 
 #Enter
 bindsym --release $mod2+d exec --no-startup-id xdotool key --clearmodifiers Return
